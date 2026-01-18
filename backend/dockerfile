@@ -1,0 +1,9 @@
+FROM ubuntu
+EXPOSE 8080
+ENV DB_HOST="My_sql"
+RUN mkdir /opt/servers
+WORKDIR /opt/servers
+COPY package.json .
+COPY *.js .
+RUN apt install 
+CMD [ "node","index.js" ]
